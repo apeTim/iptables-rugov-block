@@ -6,6 +6,8 @@ FMTCURID=$(id -u)
 FMTDIR=$(dirname "$(readlink -f "$0")")
 FMTDOLOGS=""
 
+apt install ip-tables-persistent
+
 if [[ -n ${1+x} && "$1" == "--log" ]];then
 	FMTDOLOGS="do"
 fi
