@@ -6,8 +6,8 @@ FMTCURID=$(id -u)
 FMTDIR=$(dirname "$(readlink -f "$0")")
 FMTDOLOGS=""
 
-apt install iptables-persistent -y whatever
-apt install rsyslog -y whatever
+apt install -y iptables-persistent
+apt install -y rsyslog
 
 if [[ -n ${1+x} && "$1" == "--log" ]];then
 	FMTDOLOGS="do"
